@@ -14,11 +14,27 @@
     border: 5px solid rgb(238, 255, 0);
     }
 
-    header img:nth-child(1) {
+    .header-image {
     width: 80px;
+    height: 80px;
     display: flex;
     flex-direction: right;
-    margin-right: auto;
+    }
+
+    .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .header-text h1 {
+    color: white;
+    place-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
     }
 
 
@@ -41,8 +57,9 @@
 
 
     img.fiche-pokedex:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     }
+
 
     section h1 {
     color: rgb(0, 0, 0);
@@ -70,3 +87,53 @@
     padding: 5px;
     font-size: 25px;
     }
+
+
+    @media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;  
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-text {
+        flex: none; 
+        margin-top: 10px;
+    }
+
+    .texte-image1 {
+        flex-direction: column;   
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    img.fiche-pokedex {
+        width: 100%;  
+        max-width: 350px;
+        height: auto;
+    }
+
+    section p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .logo-v {
+        max-width: 80px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    section p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .logo-v {
+        max-width: 60px;
+    }
+}
